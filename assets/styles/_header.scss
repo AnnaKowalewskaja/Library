@@ -2,23 +2,47 @@
     font-family: $second_font;
     color: $color_bg;
     font-size: 3rem;
-    &:hover{
+
+    &:hover {
         cursor: pointer;
         transition: $main_animation;
     }
 }
 
+/*header*/
 .header {
     background-color: $color_add;
 }
+
+.header__block {
+    display: flex;
+    width: 100%;
+}
+
 
 /*menu*/
 
 .menu__link {
     color: $color_bg;
     font-size: 2rem;
-    &:hover{
+
+    &:hover {
         color: $color_light;
     }
 }
 
+
+.nav {
+    display: flex;
+}
+
+.menu {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 3rem;
+}
+
+.nav__item {
+    width: 28px;
+    height: 28px;
+}

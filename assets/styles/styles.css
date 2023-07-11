@@ -13,8 +13,16 @@
   transition: all 0.3s ease-in;
 }
 
+/*header*/
 .header {
   background-color: #0C0C0E;
+}
+
+.header__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
 }
 
 /*menu*/
@@ -25,6 +33,27 @@
 
 .menu__link:hover {
   color: #BB945F;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 3rem;
+}
+
+.nav__item {
+  width: 28px;
+  height: 28px;
 }
 
 * {
@@ -65,7 +94,7 @@ ul {
 
 .container {
   max-width: 1400px;
-  width: 85%;
+  width: 98%;
   margin: 0 auto;
 }
 
