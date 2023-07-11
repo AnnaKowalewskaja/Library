@@ -1,4 +1,88 @@
 /* colors */
 /*sizes*/
 /*font-family*/
+.logo {
+  font-family: "Forum", cursive;
+  color: #FFFFFF;
+  font-size: 3rem;
+}
+
+.logo:hover {
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.header {
+  background-color: #0C0C0E;
+}
+
+/*menu*/
+.menu__link {
+  color: #FFFFFF;
+  font-size: 2rem;
+}
+
+.menu__link:hover {
+  color: #BB945F;
+}
+
+* {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", regular;
+}
+
+html {
+  font-size: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a,
+li,
+button {
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+a,
+li,
+button,
+select,
+option:hover {
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+.container {
+  max-width: 1400px;
+  width: 85%;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .container {
+    max-width: 668px;
+    width: 90%;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    max-width: 330px;
+  }
+}
+
+section {
+  width: 100%;
+}
 /*# sourceMappingURL=styles.css.map */

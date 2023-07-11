@@ -8,69 +8,91 @@
     <link href="./node_modules/normalize.css/normalize.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="./assets/styles/styles.css">
     <link rel="icon" type="image/svg" href="./assets/icons/logo.svg">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Forum&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="./assets/icons/logo.png">
+    <title>Library</title>
 </head>
 
 <body>
     <header class="header">
-        <h1>Brooklyn Public Library</h1>
-        <nav class="nav">
-            <ul class="menu">
-                <li class="menu__item">
-                    <a href="#" class="menu__link">About</a>
-                </li>
-                <li class="menu__item">
-                    <a href="#" class="menu__link">Favorites</a>
-                </li>
-                <li class="menu__item">
-                    <a href="#" class="menu__link">Coffee shop</a>
-                </li>
-                <li class="menu__item">
-                    <a href="#" class="menu__link">Contacts</a>
-                </li>
-                <li class="menu__item">
-                    <a href="#" class="menu__link">Library Card</a>
-                </li>
+        <div class="container">
+            <div class="header__block">
 
-            </ul>
-        </nav>
+                <h1 class="logo">Brooklyn Public Library</h1>
+                <nav class="nav">
+                    <ul class="menu">
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">About</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Favorites</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Coffee shop</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Contacts</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Library Card</a>
+                        </li>
+    
+                    </ul>
+                    <img src="./assets/icons/icon_profile.png" alt="profile" class="menu__">
+                </nav>
+
+            </div>
+            <!-- /.header__block -->
+         
+            
+        </div>
+        <!-- /.container -->
         <section class="welcome">
 
         </section>
     </header>
     <main class="main">
-        <section class="about">
-            <h2>About</h2>
-        </section>
+        <div class="container">
+            <section class="about">
+                <h2>About</h2>
+            </section>
 
-        <section class="favorites">
-            <h2>Favorites</h2>
-            <button>Buy</button>
+            <section class="favorites">
+                <h2>Favorites</h2>
+                <button>Buy</button>
 
-            <button>Buy</button>
+                <button>Buy</button>
 
-            <button>Buy</button>
+                <button>Buy</button>
 
-            <button>Buy</button>
-        </section>
+                <button>Buy</button>
+            </section>
 
-        <section class="coffeeShop">
-            <h2>Coffee shop</h2>
-        </section>
+            <section class="coffeeShop">
+                <h2>Coffee shop</h2>
+            </section>
 
-        <section class="contacts">
-            <h2>Our Contacts</h2>
-        </section>
+            <section class="contacts">
+                <h2>Our Contacts</h2>
+            </section>
 
-        <section class="digitalCards">
-            <h2>Digital Library Cards</h2>
-            <input type="text" value="Reader's name" >
-            <input type="text" value="Card number" >
-            <button>Check the card</button>
+            <section class="digitalCards">
+                <h2>Digital Library Cards</h2>
+                <input type="text" value="Reader's name">
+                <input type="text" value="Card number">
+                <button>Check the card</button>
 
-            <button>Sign Up</button>
-            <button>Log in</button>
-        </section>
+                <button>Sign Up</button>
+                <button>Log in</button>
+            </section>
+
+
+        </div>
+        <!-- /.container -->
+
 
     </main>
 
@@ -86,7 +108,7 @@
                 </a>
             </li>
             <li class="social__item">
-                <a href="#" class="social__link"> 
+                <a href="#" class="social__link">
                     <img src="./assets/icons/social/u_facebook-f.png" alt="facebook"></a>
             </li>
         </ul>

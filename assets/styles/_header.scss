@@ -1,0 +1,24 @@
+.logo {
+    font-family: $second_font;
+    color: $color_bg;
+    font-size: 3rem;
+    &:hover{
+        cursor: pointer;
+        transition: $main_animation;
+    }
+}
+
+.header {
+    background-color: $color_add;
+}
+
+/*menu*/
+
+.menu__link {
+    color: $color_bg;
+    font-size: 2rem;
+    &:hover{
+        color: $color_light;
+    }
+}
+

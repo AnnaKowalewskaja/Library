@@ -1,12 +1,8 @@
 /* colors */
-$links_nav:#010201;
-$bg_section:#EDF2EC;
-$main_text:#B1AEAD;
-$paragraf_text:#636060;
-$content_text:#717171;
-$select_text:#E06733;
-$headers_text:#499A18;
-
+$color_main:#000000;
+$color_add:#0C0C0E;
+$color_light:#BB945F;
+$color_bg:#FFFFFF;
 
 
 
@@ -18,10 +14,11 @@ $desktop:1439px;
 
 
 $main_animation:all 0.3s ease-in;
-$max_width:1231px;
+$max_width:1400px;
 $max_width_tablet:668px;
 $max_width_mobile:330px;
 
 /*font-family*/
-$first_font:'Inika', serif; 
-$second_font:'Inter', sans-serif;
+
+$first_font: 'Inter', regular;
+$second_font: 'Forum', cursive;
