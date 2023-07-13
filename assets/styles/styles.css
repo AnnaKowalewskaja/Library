@@ -29,6 +29,7 @@
 .menu__link {
   color: #FFFFFF;
   font-size: 2rem;
+  gap: 3rem;
 }
 
 .menu__link:hover {
@@ -54,6 +55,56 @@
 .nav__item {
   width: 28px;
   height: 28px;
+}
+
+/* Welcome */
+.welcome {
+  background: url("./../images/welcome.png"), lightgray 50%/cover no-repeat;
+  width: 144rem;
+  height: 60rem;
+}
+
+.welcome__content {
+  color: #FFFFFF;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Forum", cursive;
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 5rem;
+  letter-spacing: 0.3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 52rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.welcome__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 60rem;
+  height: 22rem;
+  padding: 3.5rem 4rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  background: #0C0C0E;
 }
 
 * {

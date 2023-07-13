@@ -25,6 +25,7 @@
 .menu__link {
     color: $color_bg;
     font-size: 2rem;
+    gap: 3rem;
 
     &:hover {
         color: $color_light;
@@ -45,4 +46,40 @@
 .nav__item {
     width: 28px;
     height: 28px;
+}
+
+
+/* Welcome */
+.welcome {
+    background: url('./../images/welcome.png'), lightgray 50% / cover no-repeat;
+    width: 144rem;
+    height: 60rem;
+}
+
+.welcome__content {
+    color: $color_bg;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: $second_font;
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 5rem;
+    letter-spacing: 0.3rem;
+    display: flex;
+    width: 52rem;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.welcome__block {
+    display: flex;
+    width: 60rem;
+    height: 22rem;
+    padding: 3.5rem 4rem;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    background: $color_add;
 }
