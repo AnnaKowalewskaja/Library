@@ -17,6 +17,7 @@
 .header__block {
     display: flex;
     width: 100%;
+    justify-content: space-between;
 }
 
 
@@ -35,17 +36,18 @@
 
 .nav {
     display: flex;
+   
 }
 
 .nav__list {
     display: inline-flex;
     align-items: flex-start;
+    margin: auto 0;
     gap: 3rem;
 }
 
 .nav__list-item {
-    width: 28px;
-    height: 28px;
+   
 }
 
 
