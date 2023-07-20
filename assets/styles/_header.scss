@@ -22,7 +22,7 @@
 
 /*menu*/
 
-.menu__link {
+.nav__list-link {
     color: $color_bg;
     font-size: 2rem;
     gap: 3rem;
@@ -37,13 +37,13 @@
     display: flex;
 }
 
-.menu {
+.nav__list {
     display: inline-flex;
     align-items: flex-start;
     gap: 3rem;
 }
 
-.nav__item {
+.nav__list-item {
     width: 28px;
     height: 28px;
 }

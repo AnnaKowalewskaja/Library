@@ -26,13 +26,13 @@
 }
 
 /*menu*/
-.menu__link {
+.nav__list-link {
   color: #FFFFFF;
   font-size: 2rem;
   gap: 3rem;
 }
 
-.menu__link:hover {
+.nav__list-link:hover {
   color: #BB945F;
 }
 
@@ -42,7 +42,7 @@
   display: flex;
 }
 
-.menu {
+.nav__list {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -52,7 +52,7 @@
   gap: 3rem;
 }
 
-.nav__item {
+.nav__list-item {
   width: 28px;
   height: 28px;
 }
