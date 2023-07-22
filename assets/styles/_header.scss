@@ -53,7 +53,6 @@
     gap: 3rem;
 }
 
-.nav__list-item {}
 
 
 /* Welcome */
@@ -121,4 +120,139 @@
     flex-shrink: 0;
     color: black;
     margin-top: 2rem;
+}
+
+/*about*/
+.about {
+    display: flex;
+    width: 140rem;
+    flex-direction: column;
+    justify-content: center;
+
+
+}
+
+.about__text {
+    text-align: center;
+    color: $color_main;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 4rem;
+    margin-bottom: 2rem;
+}
+
+.about__slider_img {
+    height: 56rem;
+    display: flex;
+    justify-content: space-between;
+
+    &+img {
+        width: 45rem;
+    }
+}
+
+.about__slider_carousel {
+    display: flex;
+    width: 6.8rem;
+    justify-content: space-between;
+    margin: 4rem auto;
+
+}
+
+.carousel__circle {
+    background: $color_add;
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 50%;
+}
+
+.carousel__circle-active {
+    background-color: $color_light;
+}
+
+/* favortes*/
+
+
+.favorites__text {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 4rem;
+}
+
+.favorites__choise {
+    display: flex;
+
+}
+
+.season__radio {
+    margin-right: 9.5rem;
+
+    input[type="radio"] {
+        position: absolute;
+        opacity: 0;
+
+        +.radio-label {
+            &:before {
+                content: '';
+                background: $color_bg;
+                border-radius: 100%;
+                border: 1px solid darken($color_bg, 100%);
+                display: inline-block;
+                width: 1.5rem;
+                height: 1.5rem;
+                position: relative;
+                top: -2px;
+                left: -4px;
+                margin-right: 1.7rem;
+                margin-top: 4px;
+                cursor: pointer;
+               // text-align: center;
+                transition: all 250ms ease;
+            }
+        }
+
+        &:checked {
+            +.radio-label {
+                font-weight: 700;
+                &:before {
+                    background-color: $color_main;
+                    box-shadow: inset 0 0 0 4px $color_bg;
+                }
+            }
+        }
+
+        &:focus {
+            +.radio-label {
+                &:before {
+                    outline: none;
+                    border-color: $color_main;
+                }
+            }
+        }
+
+        &:disabled {
+            +.radio-label {
+                &:before {
+                    box-shadow: inset 0 0 0 4px $color_bg;
+                    border-color: darken($color_bg, 25%);
+                    background: darken($color_bg, 25%);
+                }
+            }
+        }
+
+        +.radio-label {
+            &:empty {
+                &:before {
+                  //  margin-right: 0;
+                }
+            }
+        }
+    }
+}
+
+.radio-label {
+    font-size: 2rem;
+   
+    
 }
