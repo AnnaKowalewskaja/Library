@@ -254,6 +254,8 @@
 
 .season__radio input[type="radio"]:checked + .radio-label {
   font-weight: 700;
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
 }
 
 .season__radio input[type="radio"]:checked + .radio-label:before {
