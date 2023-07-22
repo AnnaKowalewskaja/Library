@@ -311,8 +311,8 @@
   display: grid;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
-  -webkit-column-gap: 22.6rem;
-          column-gap: 22.6rem;
+  -webkit-column-gap: 21.7rem;
+          column-gap: 21.7rem;
   row-gap: 4rem;
 }
 
