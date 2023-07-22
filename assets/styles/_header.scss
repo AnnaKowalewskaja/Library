@@ -2,6 +2,10 @@
     font-family: $second_font;
     color: $color_bg;
     font-size: 3rem;
+    margin-top: 2.1rem;
+    font-weight: 400;
+    line-height: 5rem;
+    letter-spacing: 0.06rem;
 
     &:hover {
         cursor: pointer;
@@ -20,6 +24,9 @@
     justify-content: space-between;
 }
 
+.header__block-link {
+    margin-top: 2.9rem;
+}
 
 /*menu*/
 
@@ -36,7 +43,7 @@
 
 .nav {
     display: flex;
-   
+    padding-left: 41rem;
 }
 
 .nav__list {
@@ -46,16 +53,14 @@
     gap: 3rem;
 }
 
-.nav__list-item {
-   
-}
+.nav__list-item {}
 
 
 /* Welcome */
 .welcome {
     background: url('./../images/welcome.png'), lightgray 50% / cover no-repeat;
     width: 144rem;
-    height: 60rem;
+    height: 38.1rem;
 }
 
 .welcome__content {
@@ -69,19 +74,51 @@
     line-height: 5rem;
     letter-spacing: 0.3rem;
     display: flex;
-    width: 52rem;
+    width: 30rem;
     flex-direction: column;
     justify-content: center;
     flex-shrink: 0;
+
 }
 
 .welcome__block {
     display: flex;
     width: 60rem;
     height: 22rem;
-    padding: 3.5rem 4rem;
+    // padding: 3.5rem 4rem;
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
     background: $color_add;
+    margin-top: 21.5rem;
+}
+
+/* heading2*/
+
+.heading2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+.heading2__content {
+    color: $color_add;
+    font-family: $second_font;
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 4rem;
+    letter-spacing: 0.2rem;
+    text-transform: capitalize;
+
+}
+
+.heading2__content+hr {
+    width: 5rem;
+    height: 0.1rem;
+    flex-shrink: 0;
+    color: black;
+    margin-top: 2rem;
 }
