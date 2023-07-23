@@ -291,14 +291,15 @@
 /* books */
 
 
-.books{
+.books {
     display: grid;
-    grid-template-columns:repeat(2,1fr);
-    column-gap:21.7rem;
-    row-gap:4rem;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 21.7rem;
+    row-gap: 4rem;
+    margin-bottom: 6.2rem;
 
-    
 }
+
 .book {
     position: relative;
     display: flex;
@@ -365,4 +366,77 @@
     border-radius: 0.2rem;
     border: 1px solid $color_add;
     background-color: $color_bg;
+}
+
+/* coffeeShop */
+.coffeShop__menu{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.coffeeShop__text {
+    text-align: center;
+    font-size: 2rem;
+    font-style: normal;
+    line-height: 4rem;
+    letter-spacing: 0.2rem;
+    margin-top: 4rem;
+    width: 140rem;
+    margin-bottom: 4rem;
+}
+.coffeShop__menu-tea {
+    text-align: right;
+    .menu__list-name{
+width: 22rem;
+margin-left: -2rem;
+    }
+    .menu__list-price{
+        margin-right: -1rem;
+    }
+}
+
+.menu{
+    width: 32%;
+    max-width: 45rem;
+}
+.menu__header {
+    color: $color_light;
+    font-family: $second_font;
+    font-size: 4rem;
+    font-style: normal;
+    line-height: 4rem;
+    letter-spacing: 0.2rem;
+    text-transform: capitalize;
+    margin-bottom: 4rem;
+    font-weight: 400;
+}
+
+.menu__list-item {
+    font-size: 2rem;
+    line-height: 4rem;
+    letter-spacing: 0.2rem;
+    text-transform: capitalize;
+    display: flex;
+    margin-bottom: 4rem;
+    width: 100%;
+
+}
+
+.menu__list-name {
+width: 20rem;
+    &+hr {
+        width: 10rem;
+        height: 0.1rem;
+        margin:  auto;
+        color: $color_light;
+    }
+}
+
+/*contacts*/
+
+.contacts {
+    .heading2{
+        margin-top: -2rem;
+    }
 }
