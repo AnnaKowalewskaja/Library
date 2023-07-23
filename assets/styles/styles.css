@@ -470,6 +470,40 @@
   margin-top: -2rem;
 }
 
+.contacts__text {
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 4rem;
+  letter-spacing: 0.2rem;
+  text-transform: capitalize;
+}
+
+.contacts__text-bold {
+  font-weight: 600;
+}
+
+.contacts__text-margin--small {
+  margin-bottom: 2rem;
+}
+
+.contacts__text-margin--big {
+  margin-bottom: 4rem;
+}
+
+.contacts__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contacts__map {
+  width: 69.6rem;
+}
+
 * {
   scroll-behavior: smooth;
   margin: 0;
