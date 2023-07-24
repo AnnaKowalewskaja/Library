@@ -466,6 +466,10 @@
 }
 
 /*contacts*/
+.contacts {
+  padding-bottom: 3.1rem;
+}
+
 .contacts .heading2 {
   margin-top: -2rem;
 }
