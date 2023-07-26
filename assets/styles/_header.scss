@@ -511,6 +511,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
 }
 
 .digitalCards__form_paragraf {
@@ -538,4 +539,21 @@
     height: 6.6rem;
     border-radius: 1rem;
     background: $color_bg;
+}
+
+.digitalCards__form_button {
+    width: 24.2rem;
+   padding-top: 1.1rem;
+   padding-bottom: .4rem;
+    align-items: flex-end;
+    border-radius: 0.2rem;
+    border: 0.1rem solid $color_add;
+    color: $color_add;
+    background-color: $color_bg;
+text-align: center;
+font-size: 2rem;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: 0.1rem;
 }

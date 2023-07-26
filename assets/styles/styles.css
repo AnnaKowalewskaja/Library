@@ -551,6 +551,9 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .digitalCards__form_paragraf {
@@ -586,6 +589,25 @@
   height: 6.6rem;
   border-radius: 1rem;
   background: #FFFFFF;
+}
+
+.digitalCards__form_button {
+  width: 24.2rem;
+  padding-top: 1.1rem;
+  padding-bottom: .4rem;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  border-radius: 0.2rem;
+  border: 0.1rem solid #0C0C0E;
+  color: #0C0C0E;
+  background-color: #FFFFFF;
+  text-align: center;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.1rem;
 }
 
 * {
