@@ -610,6 +610,19 @@
   letter-spacing: 0.1rem;
 }
 
+.digitalCards__form_input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #8E8E8E;
+  font-family: "Forum", cursive;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 5rem;
+  letter-spacing: 0.06rem;
+  padding-left: 1.9rem;
+}
+
 * {
   scroll-behavior: smooth;
   margin: 0;
