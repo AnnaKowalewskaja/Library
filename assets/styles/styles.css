@@ -467,7 +467,7 @@
 
 /*contacts*/
 .contacts {
-  padding-bottom: 3.1rem;
+  padding-bottom: 4.1rem;
 }
 
 .contacts .heading2 {
@@ -505,7 +505,87 @@
 }
 
 .contacts__map {
-  width: 69.6rem;
+  width: 68.6rem;
+}
+
+/* digital cards */
+.digitalCards__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.digitalCards__container_first {
+  width: 60rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.digitalCards__first_header {
+  font-size: 3rem;
+  letter-spacing: 0.06rem;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.digitalCards__form {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 60rem;
+  height: 38.6rem;
+  border: 3px solid #BB945F;
+  background: #FFF;
+  padding: 2rem 2rem 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.digitalCards__form_paragraf {
+  font-family: "Forum", cursive;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 5rem;
+  letter-spacing: 0.06rem;
+}
+
+.digitalCards__form_highlighted {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  background: #BB945F;
+  width: 56rem;
+  height: 27.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2rem 2rem 2.5rem;
+}
+
+.digitalCards__form_input {
+  width: 52rem;
+  height: 6.6rem;
+  border-radius: 1rem;
+  background: #FFFFFF;
 }
 
 * {

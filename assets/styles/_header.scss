@@ -100,6 +100,7 @@
     align-items: center;
     margin-top: 2rem;
     margin-bottom: 4rem;
+
 }
 
 .heading2__content {
@@ -441,7 +442,8 @@
 /*contacts*/
 
 .contacts {
-    padding-bottom: 3.1rem;
+    padding-bottom: 4.1rem;
+
     .heading2 {
         margin-top: -2rem;
     }
@@ -456,24 +458,84 @@
     text-transform: capitalize;
 }
 
-.contacts__text-bold{
+.contacts__text-bold {
     font-weight: 600;
 }
 
-.contacts__text-margin--small{
+.contacts__text-margin--small {
     margin-bottom: 2rem;
-    
+
 }
 
-.contacts__text-margin--big{
+.contacts__text-margin--big {
     margin-bottom: 4rem;
-    
+
 }
-.contacts__container{
+
+.contacts__container {
     display: flex;
     justify-content: space-between;
 }
 
-.contacts__map{
-    width: 69.6rem;
+.contacts__map {
+    width: 68.6rem;
+}
+
+/* digital cards */
+.digitalCards__container {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.digitalCards__container_first {
+    width: 60rem;
+    align-items: center;
+}
+
+.digitalCards__first_header {
+    font-size: 3rem;
+    letter-spacing: 0.06rem;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.digitalCards__form {
+    box-sizing: border-box;
+    width: 60rem;
+    height: 38.6rem;
+    border: 3px solid #BB945F;
+    background: #FFF;
+    padding: 2rem 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.digitalCards__form_paragraf {
+    font-family: $second_font;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 5rem;
+    letter-spacing: 0.06rem;
+}
+
+.digitalCards__form_highlighted {
+    box-sizing: inherit;
+    background: $color_light;
+    width: 56rem;
+    height: 27.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem 2rem 2.5rem;
+}
+
+.digitalCards__form_input {
+    width: 52rem;
+    height: 6.6rem;
+    border-radius: 1rem;
+    background: $color_bg;
 }
