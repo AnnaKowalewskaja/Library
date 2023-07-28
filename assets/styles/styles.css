@@ -623,6 +623,58 @@
   padding-left: 1.9rem;
 }
 
+.digitalCards__container_second {
+  text-align: right;
+  width: 45.6rem;
+}
+
+.digitalCards__second_header {
+  font-family: "Forum", cursive;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.06rem;
+}
+
+.digitalCards__second_text {
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 4rem;
+  letter-spacing: 0.04rem;
+  margin: 3.5rem 0;
+}
+
+.digitalCards__second_buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 28.7rem;
+}
+
+.digitalCards__second_button-margin {
+  margin-right: 2rem;
+}
+
+.digitalCards__second_button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 7.5rem;
+  height: 3rem;
+  padding: 1rem 0rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 0.2rem;
+  border: 0.1rem solid #0C0C0E;
+  background: #FFFFFF;
+}
+
 * {
   scroll-behavior: smooth;
   margin: 0;
