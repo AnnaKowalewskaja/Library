@@ -480,6 +480,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 4rem;
 }
 
 .digitalCards__container_first {
@@ -637,6 +638,87 @@
   border-radius: 0.2rem;
   border: 0.1rem solid #0C0C0E;
   background: #FFFFFF;
+}
+
+.footer {
+  background-color: #0C0C0E;
+  color: #FFFFFF;
+  padding-top: 2rem;
+}
+
+.footer__first {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 12rem;
+  /*text*/
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2rem;
+}
+
+.footer__second {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  /*text*/
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 4rem;
+  letter-spacing: 0.2rem;
+}
+
+.footer__adress {
+  width: 22.9rem;
+  margin-bottom: 2rem;
+}
+
+.footer__schedule {
+  text-align: right;
+}
+
+.footer__schedule_text {
+  margin-bottom: 1rem;
+}
+
+/*socil*/
+.social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.social__item {
+  margin-right: 1.5rem;
+}
+
+.footer__hr {
+  width: 140rem;
+  height: 0.1rem;
+  background: #FFFFFF;
+  margin-bottom: 3.5rem;
+}
+
+.footer__text-link {
+  color: #FFFFFF;
+}
+
+.footer__text-link:hover {
+  color: #BB945F;
+  -webkit-animation: all 0.3s ease-in;
+          animation: all 0.3s ease-in;
+}
+
+.footer__second {
+  padding-bottom: 4rem;
 }
 
 * {
