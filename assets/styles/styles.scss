@@ -91,3 +91,33 @@ section {
     color: black;
     margin-top: 2rem;
 }
+
+.nav__list-link{
+    text-decoration: none;
+    background-image: linear-gradient($color_light, $color_light);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 3rem;
+    transition: background-size .3s;
+    &:hover {
+        background-size: 100% 3rem;
+    }
+}
+
+.buttonHover{
+    &:hover {
+        transition: $main_animation;
+        border-radius: 0.2rem;
+        border: 1px solid $color_light;
+        background: $color_light;
+    }
+    &:disabled {
+        border: 1px solid $color_light;
+        color: $color_light;
+
+        &:hover {
+            background-color: $color_bg;
+            cursor: auto;
+        }
+    }
+}

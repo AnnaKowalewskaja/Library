@@ -35,9 +35,7 @@
     font-size: 2rem;
     gap: 3rem;
 
-    &:hover {
-        color: $color_light;
-    }
+  
 }
 
 
@@ -60,6 +58,9 @@
     background: url('./../images/welcome.png'), lightgray 50% / cover no-repeat;
     width: 144rem;
     height: 38.1rem;
+
+        margin:  0 auto;
+    
 }
 
 .welcome__content {

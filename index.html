@@ -25,19 +25,19 @@
                 <nav class="nav">
                     <ul class="nav__list ">
                         <li class="nav__list-item">
-                            <a href="#" class="nav__list-link">About</a>
+                            <a href="#about" class="nav__list-link">About</a>
                         </li>
                         <li class="nav__list-item">
-                            <a href="#" class="nav__list-link">Favorites</a>
+                            <a href="#favorites" class="nav__list-link">Favorites</a>
                         </li>
                         <li class="nav__list-item">
-                            <a href="#" class="nav__list-link">Coffee shop</a>
+                            <a href="#coffeeshop" class="nav__list-link">Coffee shop</a>
                         </li>
                         <li class="nav__list-item">
-                            <a href="#" class="nav__list-link">Contacts</a>
+                            <a href="#contacts" class="nav__list-link">Contacts</a>
                         </li>
                         <li class="nav__list-item">
-                            <a href="#" class="nav__list-link">Library Card</a>
+                            <a href="#librarycards" class="nav__list-link">Library Card</a>
                         </li>
                     </ul>
                 </nav>
@@ -50,11 +50,15 @@
         </div>
         <!-- /.container -->
         <section class="welcome">
-            <div class="welcome__block">
-                <h2 class="welcome__content">Welcome
-                    to the Brooklyn Library</h2>
+            <div class="container">
+                <div class="welcome__block">
+                    <h3 class="welcome__content">Welcome
+                        to the Brooklyn Library</h3>
+                </div>
+                <!-- /.welcome__block -->
             </div>
-            <!-- /.welcome__block -->
+            <!-- /.container -->
+            
 
         </section>
     </header>
@@ -62,7 +66,7 @@
         <div class="container">
             <section class="about">
                 <div class="heading2">
-                    <h2 class="heading2__content">About</h2>
+                    <h2 class="heading2__content" id="about">About</h2>
                     <hr>
                 </div>
                 <!-- /.heading2__block -->
@@ -76,9 +80,16 @@
                     </div>
                     <!-- /.about__slider_img -->
                     <div class="about__slider_carousel carousel">
-                        <div class="carousel__circle carousel__circle-active"></div>
-                        <div class="carousel__circle"></div>
-                        <div class="carousel__circle"></div>
+                        <div class="carousel__container">
+                            <div class="carousel__circle carousel__circle-active"></div>
+                        </div>
+                        <div class="carousel__container">
+                            <div class="carousel__circle"></div>
+                        </div>
+                        <div class="carousel__container">
+                            <div class="carousel__circle"></div>
+                        </div>
+
                     </div>
                     <!-- /.about__slider_switch -->
                 </div>
@@ -87,7 +98,7 @@
 
             <section class="favorites">
                 <div class="heading2">
-                    <h2 class="heading2__content">Favorites</h2>
+                    <h2 class="heading2__content" id="favorites">Favorites</h2>
                     <hr>
                 </div>
                 <!-- /.heading2__block -->
@@ -127,7 +138,7 @@
                             save her dangerous mind-eater son from tradition and certain death. Complete with
                             dysfunctional family values, light Sapphic romance, and a strong, complex protagonist. Not
                             for the faint of heart. </p>
-                        <button class="book__buy">Buy</button>
+                        <button class="book__buy buttonHover">Buy</button>
                         <img class="book__img" src="./assets/images/books/book1.png"
                             alt="The Book Eaters By Sunyi Dean">
                     </div>
@@ -141,7 +152,7 @@
                         <p class="book__descr">Are your Halloween movies of choice The Witches of Eastwick and Practical
                             Magic? Look no further than here - where a woman recovering from a breakup moves to a quaint
                             town in upstate New York and befriends a beautiful witch.</p>
-                        <button class="book__buy">Buy</button>
+                        <button class="book__buy buttonHover">Buy</button>
                         <img class="book__img" src="./assets/images/books/book2.png" alt="Cackle By Rachel Harrison">
                     </div>
                     <!-- /.book -->
@@ -155,7 +166,7 @@
                             epic, tragedy, and philosophy in general, arguing for Dante's uniqueness as one who raised
                             the individual and his drama of soul into something of divine significance—an inspired
                             introduction to Dante's main themes.</p>
-                        <button class="book__buy">Buy</button>
+                        <button class="book__buy buttonHover">Buy</button>
                         <img class="book__img" src="./assets/images/books/book3.png"
                             alt="Dante: Poet of the Secular World By Erich Auerbach">
                     </div>
@@ -171,11 +182,31 @@
                         <p class="book__descr">A timely and revelatory new biography of Queen Elizabeth (and her family)
                             exploring how the Windsors have evolved and thrived as the modern world has changed around
                             them.</p>
-                        <button class="book__buy">Buy</button>
+                        <button class="book__buy buttonHover" disabled>Own</button>
                         <img class="book__img" src="./assets/images/books/book4.png"
                             alt="The Last Queen By Clive Irving">
                     </div>
                     <!-- /.book -->
+
+
+                    <div class="book book-none">
+                        <p class="book__pick">Staff Picks</p>
+                        <hr>
+                        <p class="book__title">The Body</p>
+                        <p class="book__author">By Stephen King</p>
+                        <p class="book__descr">Powerful novel that takes you back to a nostalgic time, exploring both
+                            the beauty and danger and loss of innocence that is youth.</p>
+                        <button class="book__buy buttonHover">Buy</button>
+                        <img class="book__img" src="./assets/images/books/book5.png" alt="The Body
+                            By Stephen King">
+                    </div>
+                    <!-- /.book -->
+
+
+
+
+
+
 
                 </div>
                 <!-- /.books -->
@@ -189,7 +220,7 @@
 
             <section class="coffeeShop">
                 <div class="heading2">
-                    <h2 class="heading2__content">Coffee shop</h2>
+                    <h2 class="heading2__content" id="coffeeshop">Coffee shop</h2>
                     <hr>
                     <p class="coffeeShop__text">
                         In our library, we have of cozy coffee shop, welcoming in customers with frothy cappuccinos and
@@ -289,7 +320,7 @@
 
             <section class="contacts">
                 <div class="heading2">
-                    <h2 class="heading2__content">Our Contacts</h2>
+                    <h2 class="heading2__content" id="contacts">Our Contacts</h2>
                     <hr>
                 </div>
                 <!-- /.heading2__block -->
@@ -297,12 +328,17 @@
                     <div class="contacts__container_first">
                         <p class="contacts__text contacts__text-bold contacts__text-margin--big">For all Library
                             inquiries: </p>
-                        <p class="contacts__text contacts__text-margin--small">Please call (617) 730-2370</p>
-                        <p class="contacts__text contacts__text-margin--small">For TTY service, please call (617)
-                            730-2370</p>
-                        <p class="contacts__text contacts__text-margin--big">Putterham Library: (617) 730-2385</p>
+                        <p class="contacts__text contacts__text-margin--small">Please call
+                            <a href="tel:+6177302370">(617) 730-2370</a>
+                        </p>
+                        <p class="contacts__text contacts__text-margin--small">For TTY service, please call
+                            <a href="tel:+6177302370">(617) 730-2370</a>
+                        </p>
+                        <p class="contacts__text contacts__text-margin--big">Putterham Library:
+                            <a href="tel:+6177302385">(617) 730-2385</a>
+                        </p>
                         <p class="contacts__text contacts__text-bold contacts__text-margin--small"> Senior Staff</p>
-                        <p class="contacts__text">Library Director: <b>Amanda Hirst</b> </p>
+                        <p class="contacts__text">Library Director: <a href="mailto:amandahirst@gmail.com"><b>Amanda Hirst</b></a> </p>
                     </div>
                     <!-- /.contacts__container_first -->
 
@@ -319,7 +355,7 @@
 
             <section class="digitalCards">
                 <div class="heading2">
-                    <h2 class="heading2__content">Digital Library Cards</h2>
+                    <h2 class="heading2__content" id="librarycards">Digital Library Cards</h2>
                     <hr>
                 </div>
                 <!-- /.heading2__block -->
@@ -327,29 +363,29 @@
                 <div class="digitalCards__container">
                     <div class="digitalCards__container_first">
 
-                        <h2 class="digitalCards__first_header">Find your Library card</h2>
+                        <h3 class="digitalCards__first_header">Find your Library card</h3>
                         <form class="digitalCards__form">
                             <div class="digitalCards__form_highlighted">
                                 <p class="digitalCards__form_paragraf">Brooklyn Public Library</p>
-                                <input class="digitalCards__form_input" type="text" value="Reader's name" id="name">
-                                <input class="digitalCards__form_input" type="text" value="Card number" name="card">
+                                <input class="digitalCards__form_input" type="text" value="Reader's name" id="name" >
+                                <input class="digitalCards__form_input" type="text" value="Card number" name="card" >
                             </div>
                             <!-- /.digitalCards__form_highlighted -->
-                            <button class="digitalCards__form_button">Check the card</button>
+                            <button class="digitalCards__form_button buttonHover">Check the card</button>
                         </form>
 
                     </div>
                     <!-- /.digitalCards__container_first -->
 
                     <div class="digitalCards__container_second">
-                        <h2 class="digitalCards__second_header">Get a reader card</h2>
+                        <h3 class="digitalCards__second_header">Get a reader card</h3>
                         <p class="digitalCards__second_text">You will be able to see a reader card after logging into
                             account or you can register a new account</p>
                         <div class="digitalCards__second_buttons">
 
-                            <button class="digitalCards__second_button digitalCards__second_button-margin">Sign
+                            <button class="digitalCards__second_button digitalCards__second_button-margin buttonHover">Sign
                                 Up</button>
-                            <button class="digitalCards__second_button">Log in</button>
+                            <button class="digitalCards__second_button buttonHover">Log in</button>
                         </div>
                         <!-- /.digitalCards__second_buttons -->
                     </div>
@@ -374,7 +410,8 @@
 
             <div class="footer__first">
                 <div class="footer__container ">
-                    <p class="footer__adress">286 Cadman Plaza, New York, NY 11238, United States</p>
+                    
+                    <a  class="footer__adress" href="https://www.google.pl/maps/place/286+Cadman+Plaza+E,+Brooklyn,+NY+11201,+Stany+Zjednoczone/@40.6956216,-73.9900944,17z/data=!3m1!4b1!4m9!1m2!2m1!1s286+Cadman+Plaza,+New+York,+NY+11238,+United+States!3m5!1s0x89c25a49ebbb4533:0x83b2f30fade7bf9f!8m2!3d40.6956216!4d-73.9900944!15sCjMyODYgQ2FkbWFuIFBsYXphLCBOZXcgWW9yaywgTlkgMTEyMzgsIFVuaXRlZCBTdGF0ZXOSARBnZW9jb2RlZF9hZGRyZXNz4AEA?entry=ttu">286 Cadman Plaza, New York,<br> NY 11238, United States</a>
                     <ul class="social">
                         <li class="social__item">
                             <a href="#" class="social__link">
@@ -402,25 +439,27 @@
                     <!-- /.footer__schedule -->
                 </div>
                 <!-- /.footer__container -->
-    
-    
+
+
             </div>
             <!-- /.footer__first -->
-    <hr class="footer__hr">
-    
+            <hr class="footer__hr">
+
             <div class="footer__second">
                 <p class="footer__text">2023</p>
-                <a class="footer__text footer__text-link" href="https://github.com/AnnaKowalewskaja">The Rolling Scopes
+                <a class="footer__text footer__text-link" href="https://rs.school/js-stage0/">The Rolling Scopes
                     School</a>
-                <a class="footer__text footer__text-link" href="https://github.com/AnnaKowalewskaja">AnnaKowalewskaja</a>
-    
+                <a class="footer__text footer__text-link"
+                    href="https://github.com/AnnaKowalewskaja">AnnaKowalewskaja</a>
+
             </div>
             <!-- /.footer__second -->
-    
+
         </div>
         <!-- /.container -->
-        
+
     </footer>
 </body>
+<script src="./index.js"></script>
 
 </html>
