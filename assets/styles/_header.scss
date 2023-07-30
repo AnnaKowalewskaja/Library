@@ -91,26 +91,48 @@
     background: $color_add;
     margin-top: 21.5rem;
 }
-.nav__open{
+
+.nav__open {
     display: none;
 }
 
-.nav__open_burger{
+.nav__open_burger {
     height: 100%;
+    background-color: rgba(243, 243, 243, 0);
+    border: none;
 
-    :hover{
+    :hover {
         cursor: pointer;
     }
-    &+hr{
-width: 100%;
+
+    &+hr {
+        width: 100%;
 
     }
 }
+
 @media (min-width:768px) and (max-width:1200px) {
-.nav{
-    display: none;
-}
-.nav__open{
-    display: block;
-}
+    .nav {
+        display: none;
+    }
+
+    .header__block {
+        display: grid;
+        justify-content: stretch;
+        grid-template-columns: auto 2.8rem 4.5rem;
+        gap: 4rem;
+    }
+
+    .nav__open {
+        display: block;
+    }
+
+    .welcome {
+        width: auto;
+  
+    }
+
+    .about {
+        width: auto;
+    }
 }

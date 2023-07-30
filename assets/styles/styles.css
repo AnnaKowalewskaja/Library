@@ -119,6 +119,8 @@
 
 .nav__open_burger {
   height: 100%;
+  background-color: rgba(243, 243, 243, 0);
+  border: none;
 }
 
 .nav__open_burger :hover {
@@ -133,8 +135,24 @@
   .nav {
     display: none;
   }
+  .header__block {
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-pack: stretch;
+        -ms-flex-pack: stretch;
+            justify-content: stretch;
+    -ms-grid-columns: auto 2.8rem 4.5rem;
+        grid-template-columns: auto 2.8rem 4.5rem;
+    gap: 4rem;
+  }
   .nav__open {
     display: block;
+  }
+  .welcome {
+    width: auto;
+  }
+  .about {
+    width: auto;
   }
 }
 
@@ -828,10 +846,10 @@ ul {
   margin: 0 auto;
 }
 
-@media (min-width: 728px) and (max-width: 1439px) {
+@media (min-width: 768px) and (max-width: 1439px) {
   .container {
-    max-width: 668px;
-    width: 90%;
+    max-width: 728px;
+    width: 98%;
   }
 }
 
