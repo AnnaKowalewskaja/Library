@@ -16,6 +16,7 @@
 /*header*/
 .header {
     background-color: $color_add;
+    width: 100%;
 }
 
 .header__block {
@@ -35,7 +36,7 @@
     font-size: 2rem;
     gap: 3rem;
 
-  
+
 }
 
 
@@ -58,9 +59,7 @@
     background: url('./../images/welcome.png'), lightgray 50% / cover no-repeat;
     width: 144rem;
     height: 38.1rem;
-
-        margin:  0 auto;
-    
+    margin: 0 auto;
 }
 
 .welcome__content {
@@ -91,4 +90,27 @@
     flex-shrink: 0;
     background: $color_add;
     margin-top: 21.5rem;
+}
+.nav__open{
+    display: none;
+}
+
+.nav__open_burger{
+    height: 100%;
+
+    :hover{
+        cursor: pointer;
+    }
+    &+hr{
+width: 100%;
+
+    }
+}
+@media (min-width:768px) and (max-width:1200px) {
+.nav{
+    display: none;
+}
+.nav__open{
+    display: block;
+}
 }

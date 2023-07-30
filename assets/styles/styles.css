@@ -20,6 +20,7 @@
 /*header*/
 .header {
   background-color: #0C0C0E;
+  width: 100%;
 }
 
 .header__block {
@@ -110,6 +111,31 @@
       flex-shrink: 0;
   background: #0C0C0E;
   margin-top: 21.5rem;
+}
+
+.nav__open {
+  display: none;
+}
+
+.nav__open_burger {
+  height: 100%;
+}
+
+.nav__open_burger :hover {
+  cursor: pointer;
+}
+
+.nav__open_burger + hr {
+  width: 100%;
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .nav {
+    display: none;
+  }
+  .nav__open {
+    display: block;
+  }
 }
 
 /*about*/
@@ -802,7 +828,7 @@ ul {
   margin: 0 auto;
 }
 
-@media (min-width: 768px) and (max-width: 1439px) {
+@media (min-width: 728px) and (max-width: 1439px) {
   .container {
     max-width: 668px;
     width: 90%;
