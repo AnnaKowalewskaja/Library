@@ -449,6 +449,7 @@
 
 .coffeShop__menu-tea .menu__list-price {
   margin-right: -1rem;
+  font-family: "Forum", cursive;
 }
 
 .menu {
@@ -633,6 +634,7 @@
   height: 6.6rem;
   border-radius: 1rem;
   background: #FFFFFF;
+  border: none;
 }
 
 .digitalCards__form_button {
