@@ -2,7 +2,7 @@
 /*sizes*/
 /*font-family*/
 .logo {
-  font-family: "Forum", cursive;
+  font-family: "Forum", regular;
   color: #FFFFFF;
   font-size: 3rem;
   margin-top: 2rem;
@@ -74,7 +74,7 @@
   color: #FFFFFF;
   text-transform: uppercase;
   text-align: center;
-  font-family: "Forum", cursive;
+  font-family: "Forum", regular;
   font-size: 4rem;
   font-style: normal;
   font-weight: 400;
@@ -365,7 +365,7 @@
 }
 
 .book__pick {
-  font-family: "Forum", cursive;
+  font-family: "Forum", regular;
   font-size: 2rem;
   font-style: normal;
   font-weight: 400;
@@ -449,7 +449,7 @@
 
 .coffeShop__menu-tea .menu__list-price {
   margin-right: -1rem;
-  font-family: "Forum", cursive;
+  font-family: "Forum", regular;
 }
 
 .menu {
@@ -459,7 +459,7 @@
 
 .menu__header {
   color: #BB945F;
-  font-family: "Forum", cursive;
+  font-family: "Forum", regular;
   font-size: 4rem;
   font-style: normal;
   line-height: 4rem;
@@ -487,7 +487,7 @@
 
 .menu__list-name + hr {
   width: 10rem;
-  height: 0.1rem;
+  height: 0rem;
   margin: auto;
   color: #BB945F;
 }
@@ -602,7 +602,7 @@
 }
 
 .digitalCards__form_paragraf {
-  font-family: "Forum", cursive;
+  font-family: "Forum", regular;
   font-size: 3rem;
   font-style: normal;
   font-weight: 400;
@@ -660,7 +660,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   color: #8E8E8E;
-  font-family: "Forum", cursive;
+  font-family: "Forum", regular;
   font-size: 3rem;
   font-style: normal;
   font-weight: 400;
@@ -675,7 +675,7 @@
 }
 
 .digitalCards__second_header {
-  font-family: "Forum", cursive;
+  font-family: "Forum", regular;
   font-size: 3rem;
   font-style: normal;
   font-weight: 400;
@@ -780,6 +780,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-top: 2rem;
 }
 
 .social__item {
@@ -799,12 +800,25 @@
 
 .footer__text-link:hover {
   color: #BB945F;
-  -webkit-animation: all 0.3s ease-in;
-          animation: all 0.3s ease-in;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
 }
 
 .footer__second {
   padding-bottom: 4rem;
+}
+
+.social__item {
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.social__item :hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
 }
 
 * {
@@ -829,7 +843,6 @@ button {
 }
 
 a,
-li,
 button,
 select,
 option:hover {
@@ -884,7 +897,7 @@ section {
 
 .heading2__content {
   color: #0C0C0E;
-  font-family: "Forum", cursive;
+  font-family: "Forum", regular;
   font-size: 4rem;
   font-style: normal;
   font-weight: 400;
@@ -895,7 +908,7 @@ section {
 
 .heading2__content + hr {
   width: 5rem;
-  height: 0.1rem;
+  height: 0rem;
   -ms-flex-negative: 0;
       flex-shrink: 0;
   color: black;

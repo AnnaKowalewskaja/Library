@@ -54,6 +54,7 @@
 /*socil*/
 .social{
     display: flex;
+    margin-top: 2rem;
 }
 .social__item{
     margin-right: 1.5rem;
@@ -70,9 +71,18 @@
     color:$color_bg;
     &:hover{
         color:$color_light;
-        animation: $main_animation;
+        transition: $main_animation;
     }
 }
 .footer__second{
     padding-bottom:4rem;
+}
+.social__item{
+    transition: $main_animation;
+}
+.social__item :hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: $main_animation;
+    
 }

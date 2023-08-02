@@ -26,7 +26,6 @@ button {
 }
 
 a,
-li,
 button,
 select,
 option:hover {
@@ -87,7 +86,7 @@ section {
 
 .heading2__content+hr {
     width: 5rem;
-    height: 0.1rem;
+    height: 0rem;
     flex-shrink: 0;
     color: black;
     margin-top: 2rem;
