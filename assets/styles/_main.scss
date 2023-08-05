@@ -5,6 +5,9 @@
     flex-direction: column;
     justify-content: center;
 
+    @media (min-width:768px) and (max-width:1200px) {
+        width: 100%;
+    }
 
 }
 
@@ -25,7 +28,16 @@
 
     &+img {
         width: 45rem;
+
     }
+
+    @media (min-width:768px) and (max-width:1440px) {
+        &+img {
+            width: 58, 59%;
+        }
+
+    }
+
 }
 
 .about__slider_carousel {
@@ -169,7 +181,33 @@
         width: 12rem;
         margin-left: -1.8rem;
     }
+
+    @media (min-width:768px) and (max-width:1440px) {
+        &:nth-child(odd) {
+            display: flex;
+             width: auto;
+            margin-right: 0;
+        }
+
+        &:nth-child(even) {
+            width: auto;
+            display: flex;
+            margin-right: 0;
+        }
+
+
+    }
 }
+
+@media (min-width:768px) and (max-width:1440px) {
+    .season {
+        display: flex;
+       // justify-content: space-between;
+       gap: 14.3%;
+        margin-left: .6rem;
+    }
+}
+
 
 
 
@@ -197,9 +235,10 @@
     padding-left: 2rem;
 }
 
-.book-none{
+.book-none {
     display: none;
 }
+
 .book__img {
     position: absolute;
     top: 25rem;
@@ -259,7 +298,25 @@
 
 
 
-   
+
+}
+
+@media (min-width:768px) and (max-width:1440px) {
+.books{
+    // display: flex;
+    // flex-direction: column;
+    width: 94%;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    row-gap: 2%;
+}
+
+.book{
+    justify-self: center;
+}
+.favorites{
+    margin-bottom: 26%;
+}
 }
 
 /* coffeeShop */
@@ -332,7 +389,12 @@
         color: $color_light;
     }
 }
+@media (min-width:768px) and (max-width:1440px) {
+.coffeeShop__text{
+width: 101%;
+}
 
+}
 /*contacts*/
 
 .contacts {
@@ -350,19 +412,21 @@
     line-height: 4rem;
     letter-spacing: 0.2rem;
     text-transform: capitalize;
-    a{
-        color:$color_main;
-    text-decoration: none;
-    background-image: linear-gradient($color_light, $color_light);
-    background-position: 0% 100%;
-    background-repeat: no-repeat;
-    background-size: 0% .4rem;
-    transition: background-size .3s;
-    &:hover {
-        color:$color_light-dark;
-        background-size: 100% .2rem;
-    }
-   
+
+    a {
+        color: $color_main;
+        text-decoration: none;
+        background-image: linear-gradient($color_light, $color_light);
+        background-position: 0% 100%;
+        background-repeat: no-repeat;
+        background-size: 0% .4rem;
+        transition: background-size .3s;
+
+        &:hover {
+            color: $color_light-dark;
+            background-size: 100% .2rem;
+        }
+
     }
 }
 
@@ -465,7 +529,7 @@
     font-weight: 700;
     line-height: normal;
     letter-spacing: 0.1rem;
-   
+
 }
 
 .digitalCards__form_input {

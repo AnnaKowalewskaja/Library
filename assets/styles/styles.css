@@ -152,9 +152,6 @@
   .welcome {
     width: auto;
   }
-  .about {
-    width: auto;
-  }
 }
 
 /*about*/
@@ -170,6 +167,12 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .about {
+    width: 100%;
+  }
 }
 
 .about__text {
@@ -194,6 +197,12 @@
 
 .about__slider_img + img {
   width: 45rem;
+}
+
+@media (min-width: 768px) and (max-width: 1440px) {
+  .about__slider_img + img {
+    width: 58, 59%;
+  }
 }
 
 .about__slider_carousel {
@@ -326,6 +335,33 @@
   margin-left: -1.8rem;
 }
 
+@media (min-width: 768px) and (max-width: 1440px) {
+  .season__radio:nth-child(odd) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: auto;
+    margin-right: 0;
+  }
+  .season__radio:nth-child(even) {
+    width: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1440px) {
+  .season {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 14.3%;
+    margin-left: .6rem;
+  }
+}
+
 /* books */
 .books {
   display: -ms-grid;
@@ -416,6 +452,25 @@
   font-weight: 700;
 }
 
+@media (min-width: 768px) and (max-width: 1440px) {
+  .books {
+    width: 94%;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    row-gap: 2%;
+  }
+  .book {
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  .favorites {
+    margin-bottom: 26%;
+  }
+}
+
 /* coffeeShop */
 .coffeShop__menu {
   display: -webkit-box;
@@ -490,6 +545,12 @@
   height: 0rem;
   margin: auto;
   color: #BB945F;
+}
+
+@media (min-width: 768px) and (max-width: 1440px) {
+  .coffeeShop__text {
+    width: 101%;
+  }
 }
 
 /*contacts*/
