@@ -480,6 +480,10 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
 }
 
 .coffeeShop__text {
@@ -502,8 +506,7 @@
   margin-left: -2rem;
 }
 
-.coffeShop__menu-tea .menu__list-price {
-  margin-right: -1rem;
+.menu__list-price {
   font-family: "Forum", regular;
 }
 
@@ -550,6 +553,13 @@
 @media (min-width: 768px) and (max-width: 1440px) {
   .coffeeShop__text {
     width: 101%;
+  }
+  .menu {
+    width: 61%;
+  }
+  .coffeShop__menu:nth-child(2) {
+    -ms-flex-line-pack: end;
+        align-content: flex-end;
   }
 }
 

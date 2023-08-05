@@ -185,7 +185,7 @@
     @media (min-width:768px) and (max-width:1440px) {
         &:nth-child(odd) {
             display: flex;
-             width: auto;
+            width: auto;
             margin-right: 0;
         }
 
@@ -202,8 +202,8 @@
 @media (min-width:768px) and (max-width:1440px) {
     .season {
         display: flex;
-       // justify-content: space-between;
-       gap: 14.3%;
+        // justify-content: space-between;
+        gap: 14.3%;
         margin-left: .6rem;
     }
 }
@@ -302,21 +302,22 @@
 }
 
 @media (min-width:768px) and (max-width:1440px) {
-.books{
-    // display: flex;
-    // flex-direction: column;
-    width: 94%;
-    grid-template-columns: repeat(1, 1fr);
-    justify-content: center;
-    row-gap: 2%;
-}
+    .books {
+        // display: flex;
+        // flex-direction: column;
+        width: 94%;
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+        row-gap: 2%;
+    }
 
-.book{
-    justify-self: center;
-}
-.favorites{
-    margin-bottom: 26%;
-}
+    .book {
+        justify-self: center;
+    }
+
+    .favorites {
+        margin-bottom: 26%;
+    }
 }
 
 /* coffeeShop */
@@ -324,6 +325,7 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
+    flex-flow: column wrap;
 }
 
 .coffeeShop__text {
@@ -345,10 +347,12 @@
         margin-left: -2rem;
     }
 
-    .menu__list-price {
-        margin-right: -1rem;
-        font-family: $second_font;
-    }
+
+}
+
+.menu__list-price {
+
+    font-family: $second_font;
 }
 
 .menu {
@@ -389,12 +393,26 @@
         color: $color_light;
     }
 }
+
 @media (min-width:768px) and (max-width:1440px) {
-.coffeeShop__text{
-width: 101%;
-}
+    .coffeeShop__text {
+        width: 101%;
+    }
+
+   
+
+    .menu {
+        width: 61%;
+    }
+
+    .coffeShop__menu:nth-child(2){
+       align-content: flex-end;
+    }
+
+
 
 }
+
 /*contacts*/
 
 .contacts {
