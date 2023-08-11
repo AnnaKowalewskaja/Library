@@ -617,10 +617,26 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
 }
 
 .contacts__map {
   width: 68.6rem;
+}
+
+@media (min-width: 768px) and (max-width: 1440px) {
+  .contacts__container_first {
+    margin-bottom: 10rem;
+  }
+  .contacts__container_second {
+    margin-left: 2.3rem;
+    width: 100%;
+    max-width: 69.6rem;
+    margin-top: .5rem;
+  }
 }
 
 /* digital cards */
@@ -632,6 +648,10 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 4rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
 }
 
 .digitalCards__container_first {
@@ -790,6 +810,32 @@
   border-radius: 0.2rem;
   border: 0.1rem solid #0C0C0E;
   background: #FFFFFF;
+}
+
+@media (min-width: 768px) and (max-width: 1440px) {
+  .digitalCards__container_first {
+    width: 100%;
+  }
+  .digitalCards__form {
+    width: 100%;
+    max-width: 60rem;
+    margin: 0 auto;
+  }
+  .digitalCards__container_second {
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 2.3rem;
+  }
+  .digitalCards__second_text {
+    max-width: 60rem;
+    margin-bottom: 1px;
+  }
+  .digitalCards__second_buttons {
+    padding-left: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .footer {
