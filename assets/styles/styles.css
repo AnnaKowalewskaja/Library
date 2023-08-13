@@ -132,7 +132,7 @@
   width: 100%;
 }
 
-@media (min-width: 768px) and (max-width: 1200px) {
+@media (min-width: 768px) and (max-width: 1440px) {
   .nav {
     display: none;
   }
@@ -214,7 +214,7 @@
           justify-content: center;
 }
 
-@media (min-width: 768px) and (max-width: 1200px) {
+@media (min-width: 768px) and (max-width: 1440px) {
   .about {
     width: 100%;
   }
@@ -230,7 +230,7 @@
   margin-bottom: 2rem;
 }
 
-.about__slider_img {
+.about__slider_container {
   height: 56rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -240,13 +240,36 @@
           justify-content: space-between;
 }
 
-.about__slider_img + img {
+.about__slider_container + .about__slider_img {
   width: 45rem;
 }
 
 @media (min-width: 768px) and (max-width: 1440px) {
-  .about__slider_img + img {
-    width: 58, 59%;
+  .about__slider_container {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: auto 8rem;
+  }
+  .about__slider_container + .about__slider_img {
+    width: 59%;
+  }
+}
+
+.about__slider_arrow {
+  display: none;
+}
+
+@media (min-width: 768px) and (max-width: 1440px) {
+  .about__slider_img-hide {
+    display: none;
+  }
+  .about__slider_arrow {
+    display: inline;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-top: 4rem;
   }
 }
 
@@ -549,6 +572,12 @@
 .coffeShop__menu-tea .menu__list-name {
   width: 22rem;
   margin-left: -2rem;
+}
+
+@media (min-width: 768px) and (max-width: 1440px) {
+  .coffeShop__menu-tea {
+    margin-left: 28rem;
+  }
 }
 
 .menu__list-price {
@@ -954,6 +983,12 @@
   height: 0.1rem;
   background: #FFFFFF;
   margin-bottom: 3.5rem;
+}
+
+@media (min-width: 768px) and (max-width: 1440px) {
+  .footer__hr {
+    width: 100%;
+  }
 }
 
 .footer__text-link {

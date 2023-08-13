@@ -65,7 +65,9 @@
     height: 0.1rem;
     background:$color_bg;
     margin-bottom: 3.5rem;
-
+    @media (min-width:768px) and (max-width:1440px) {
+width: 100%;
+    }
 }
 .footer__text-link{
     color:$color_bg;
