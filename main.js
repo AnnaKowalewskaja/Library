@@ -1,15 +1,34 @@
-const menuButton = document.querySelector(".nav__open_burger");
-const menu = document.querySelector(".nav__open_menu");
-const menuCloseButton = document.querySelector(".menu__close");
+let burger = document.querySelector('.burger');
+let menu = document.querySelector('.nav');
+let menuLinks = document.querySelectorAll('.nav__list-link');
+let body = document.querySelector('.body');
 
-menuButton.addEventListener('click', ()=>{
-    menu.classList.add('is-active');
-    console.log('hello');
-   // menuCloseButton.classList.add('is-active');
+let openMenu = function () {
+    burger.classList.toggle('burger--active');
+    menu.classList.toggle('nav--active');
+    body.classList.toggle('noscroll');
+}
+
+burger.addEventListener('click', (e) => {
+    e.stopPropagation();
+    openMenu();
 });
 
-// menuButton.addEventListener('click', ()=>{
-//     menu.classList.remove('is-active');
-//     console.log('by');
-//     //menuCloseButton.classList.remove('is-active');
-// });
+menuLinks.forEach((el) => {
+    el.addEventListener('click', function () {
+        burger.classList.remove('burger--active');
+        menu.classList.remove('nav--active');
+        body.classList.remove('noscroll');
+    });
+});
+
+body.addEventListener('click', (e) => {
+    let target = e.target;
+    let targetBurger = target == burger;
+    let targetMenu = target == menu || menu.contains(target);
+    let activeMenu = menu.classList.contains('nav--active');
+
+    if (!targetBurger && !targetMenu && activeMenu) {
+        openMenu();
+    }
+});
