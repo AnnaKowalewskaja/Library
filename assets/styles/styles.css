@@ -71,6 +71,12 @@
   margin: 0 auto;
 }
 
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .welcome {
+    width: 100%;
+  }
+}
+
 .welcome__content {
   color: #FFFFFF;
   text-transform: uppercase;
@@ -129,7 +135,7 @@
   cursor: pointer;
 }
 
-@media (min-width: 768px) and (max-width: 1440px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .nav {
     visibility: hidden;
   }
@@ -148,6 +154,15 @@
   }
   .welcome {
     width: auto;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .nav {
+    padding-left: 1rem;
+  }
+  .header .container {
+    max-width: 98%;
   }
 }
 
