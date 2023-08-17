@@ -994,6 +994,19 @@
   }
 }
 
+.about__slider_img {
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.slide__toggle {
+  display: block;
+}
+
+.slide__toggle_none {
+  display: none;
+}
+
 .footer {
   background-color: #0C0C0E;
   color: #FFFFFF;

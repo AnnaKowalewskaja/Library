@@ -53,6 +53,8 @@
 @media (min-width:768px) and (max-width:1440px) {
     .about__slider_img-hide {
         display: none;
+       // opacity: 0;
+       
     }
 
     .about__slider_arrow {
@@ -681,3 +683,10 @@
     }
 
 }
+
+
+
+  .about__slider_img{
+    transition: $main_animation;
+  }
+
