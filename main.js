@@ -62,12 +62,12 @@ function showNextSlide() {
 function updateSlider() {
     slides.forEach((slide, index) => {
         if (index === slideIndex) {
-            slide.style.display = 'block';
+            // slide.style.display = 'block';
 
-
+            slide.style.visibility = 'visible';
         } else {
-             slide.style.display = 'none';
-            
+            //slide.style.display = 'none';
+            slide.style.visibility = 'hidden';
         }
     });
 }

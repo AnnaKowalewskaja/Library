@@ -71,7 +71,7 @@
   margin: 0 auto;
 }
 
-@media (min-width: 1024px) and (max-width: 1440px) {
+@media (min-width: 1024px) and (max-width: 1439px) {
   .welcome {
     width: 100%;
   }
@@ -157,7 +157,7 @@
   }
 }
 
-@media (min-width: 1024px) and (max-width: 1440px) {
+@media (min-width: 1024px) and (max-width: 1439px) {
   .nav {
     padding-left: 1rem;
   }
@@ -296,7 +296,7 @@
           justify-content: center;
 }
 
-@media (min-width: 768px) and (max-width: 1440px) {
+@media (min-width: 768px) and (max-width: 1439px) {
   .about {
     width: 100%;
   }
@@ -326,7 +326,7 @@
   width: 45rem;
 }
 
-@media (min-width: 768px) and (max-width: 1440px) {
+@media (min-width: 768px) and (max-width: 1439px) {
   .about__slider_container {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -342,9 +342,13 @@
   display: none;
 }
 
-@media (min-width: 768px) and (max-width: 1440px) {
+.about__slider_img-hide {
+  visibility: visible;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
   .about__slider_img-hide {
-    display: none;
+    visibility: hidden;
   }
   .about__slider_arrow {
     display: inline;
@@ -485,7 +489,7 @@
   margin-left: -1.8rem;
 }
 
-@media (min-width: 768px) and (max-width: 1440px) {
+@media (min-width: 768px) and (max-width: 1439px) {
   .season__radio:nth-child(odd) {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -502,7 +506,7 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 1440px) {
+@media (min-width: 768px) and (max-width: 1439px) {
   .season {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -602,7 +606,7 @@
   font-weight: 700;
 }
 
-@media (min-width: 768px) and (max-width: 1440px) {
+@media (min-width: 768px) and (max-width: 1439px) {
   .books {
     width: 94%;
     -ms-grid-columns: (1fr)[1];
@@ -656,7 +660,7 @@
   margin-left: -2rem;
 }
 
-@media (min-width: 768px) and (max-width: 1440px) {
+@media (min-width: 768px) and (max-width: 1439px) {
   .coffeShop__menu-tea {
     margin-left: 28rem;
   }
@@ -706,7 +710,7 @@
   color: #BB945F;
 }
 
-@media (min-width: 768px) and (max-width: 1440px) {
+@media (min-width: 768px) and (max-width: 1439px) {
   .coffeeShop__text {
     width: 101%;
   }
@@ -783,7 +787,7 @@
   width: 68.6rem;
 }
 
-@media (min-width: 768px) and (max-width: 1440px) {
+@media (min-width: 768px) and (max-width: 1439px) {
   .contacts__container_first {
     margin-bottom: 10rem;
   }
@@ -968,7 +972,7 @@
   background: #FFFFFF;
 }
 
-@media (min-width: 768px) and (max-width: 1440px) {
+@media (min-width: 768px) and (max-width: 1439px) {
   .digitalCards__container_first {
     width: 100%;
   }
@@ -997,14 +1001,59 @@
 .about__slider_img {
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
+  position: absolute;
+  right: -22.4rem;
+  top: -28.3rem;
 }
 
-.slide__toggle {
-  display: block;
+@media (min-width: 768px) and (max-width: 1439px) {
+  .slider {
+    position: relative;
+  }
 }
 
-.slide__toggle_none {
-  display: none;
+.slider__background {
+  visibility: hidden;
+  z-index: 1;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .slider__background {
+    width: 100%;
+    height: 100%;
+    -webkit-animation: hide .3s ease-in-out;
+            animation: hide .3s ease-in-out;
+  }
+}
+
+@-webkit-keyframes hide {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  99% {
+    opacity: 0;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes hide {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  99% {
+    opacity: 0;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 .footer {
@@ -1080,7 +1129,7 @@
   margin-bottom: 3.5rem;
 }
 
-@media (min-width: 768px) and (max-width: 1440px) {
+@media (min-width: 768px) and (max-width: 1439px) {
   .footer__hr {
     width: 100%;
   }
