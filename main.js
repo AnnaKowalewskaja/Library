@@ -59,15 +59,18 @@ function showNextSlide() {
     updateSlider();
 }
 
+
+
 function updateSlider() {
     slides.forEach((slide, index) => {
         if (index === slideIndex) {
             // slide.style.display = 'block';
 
-            slide.style.visibility = 'visible';
+            slide.classList.remove('about__slider_img-hide');
         } else {
             //slide.style.display = 'none';
-            slide.style.visibility = 'hidden';
+           // slide.style.opacity = 0;
+           slide.classList.add('about__slider_img-hide');
         }
     });
 }
