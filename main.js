@@ -41,29 +41,32 @@ body.addEventListener('click', (e) => {
 
 const slider = document.querySelector('.slider');
 
-const prevButton = document.querySelector('.prev-button');
-const nextButton = document.querySelector('.next-button');
+const prevBtn = document.querySelector('.prev-button');
+const nextBtn = document.querySelector('.next-button');
 const slides = Array.from(slider.querySelectorAll('.about__slider_img'));
 let slideMotion = 0;
 let slideMotionStep = slides[0].offsetWidth + +window.getComputedStyle(slider).gap.substring(0, 2);
 
-let carouselWrapper = document.querySelector('.about__slider_carousel');
-let carousel = Array.from(carouselWrapper.querySelectorAll('.carousel__circle'));
+const carouselBtn1 = document.querySelector('#carousel_1');
+const carouselBtn2 = document.querySelector('#carousel_2');
+const carouselBtn3 = document.querySelector('#carousel_3');
+let activeCarouselBtn = 1;
 
-prevButton.addEventListener('click', showPreviousSlide);
-nextButton.addEventListener('click', showNextSlide);
-carouselWrapper.addEventListener('click', event => {
-    const status = event.target.getAttribute("status");
-    if(status=="non-active"){
-        showNextSlide();
-    }
- 
-  })
+
+prevBtn.addEventListener('click', showPreviousSlide);
+nextBtn.addEventListener('click', showNextSlide);
+
+
+carouselBtn1.addEventListener('click', () => { showSlideNumber(1) });
+carouselBtn2.addEventListener('click', () => { showSlideNumber(2) });
+carouselBtn3.addEventListener('click', () => { showSlideNumber(3) });
+
+
 
 
 function showPreviousSlide() {
-    if (slideMotion - slideMotionStep <= 0) {
-        prevButton.disabled;
+    if (slideMotion - slideMotionStep < 0) {
+        prevBtn.disabled;
     } else {
         slideMotion -= slideMotionStep;
 
@@ -71,29 +74,71 @@ function showPreviousSlide() {
             slide.style.right = slideMotion + 'px';
         });
 
-        if (nextButton.disabled) {
-            nextButton.disabled = !nextButton.disabled;
+        if (nextBtn.disabled) {
+            nextBtn.disabled = !nextBtn.disabled;
         };
     }
 }
 
 function showNextSlide() {
-    if (slideMotion + slideMotionStep >= slideMotionStep * slides.length) {
-        nextButton.disabled;
+    if ((slideMotion + slideMotionStep >= slideMotionStep * slides.length) || (slider.offsetWidth >= 1400 && slideMotion + slideMotionStep >= slideMotionStep * (slides.length - 2))) {
+        nextBtn.disabled;
     } else {
         slideMotion += slideMotionStep;
         slides.forEach((slide, index) => {
             slide.style.right = slideMotion + 'px';
         })
-        if (prevButton.disabled) {
-            prevButton.disabled = !prevButton.disabled;
+        if (prevBtn.disabled) {
+            prevBtn.disabled = !prevBtn.disabled;
         };
 
     }
 
 }
-function changeSlideCarousel(index) {
-carousel[index].classList.toggle('carousel__circle-active');
+
+function changeSlide(){
+        slides.forEach((slide, index) => {
+            slide.style.right = slideMotion + 'px';
+        })
+}
+function toggleClass(id,className){
+    if(id==1){
+        carouselBtn1.classList.add(className);
+        carouselBtn2.classList.remove(className);
+        carouselBtn3.classList.remove(className);
+    }else if(id==2){
+        carouselBtn1.classList.remove(className);
+        carouselBtn2.classList.add(className);
+        carouselBtn3.classList.remove(className);
+    }else if(id==3){
+        carouselBtn1.classList.remove(className);
+        carouselBtn2.classList.remove(className);
+        carouselBtn3.classList.add(className);
+    }
+
+}
+
+function showSlideNumber(id) {
+    switch (id) {
+        case 1:
+            slideMotion=0;
+            changeSlide();
+            toggleClass(1,'carousel__circle-active');
+            break;
+        case 2:
+            slideMotion=slideMotionStep;
+            changeSlide();
+            toggleClass(2,'carousel__circle-active');
+            break;
+        case 3:
+            slideMotion=slideMotionStep*2;
+            changeSlide();
+            toggleClass(3,'carousel__circle-active');
+            break;
+        default:
+            console.log(`Error`);
+    }
+
 }
 
 
@@ -102,8 +147,8 @@ carousel[index].classList.toggle('carousel__circle-active');
 //work!!!!!
 //let slideIndex = 0;
 //const slideCount = slides.length;
-// prevButton.addEventListener('click', showPreviousSlide);
-// nextButton.addEventListener('click', showNextSlide);
+// prevBtn.addEventListener('click', showPreviousSlide);
+// nextBtn.addEventListener('click', showNextSlide);
 
 // function showPreviousSlide() {
 //     slideIndex = (slideIndex - 1 + slideCount) % slideCount;
