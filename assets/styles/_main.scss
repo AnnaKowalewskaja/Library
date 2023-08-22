@@ -283,9 +283,7 @@
     padding-left: 2rem;
 }
 
-.book-none {
-    display: none;
-}
+
 
 .book__img {
     position: absolute;
@@ -728,3 +726,18 @@
     }
     //left:-20rem;
 }
+
+.books {
+
+    transition: $main_animation;
+    //position: relative;
+    overflow: hidden;
+    display: grid;
+    height:114.4rem ;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+}
+
+
+
+

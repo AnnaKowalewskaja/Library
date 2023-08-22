@@ -96,21 +96,21 @@ function showNextSlide() {
 
 }
 
-function changeSlide(){
-        slides.forEach((slide, index) => {
-            slide.style.right = slideMotion + 'px';
-        })
+function changeSlide() {
+    slides.forEach((slide, index) => {
+        slide.style.right = slideMotion + 'px';
+    })
 }
-function toggleClass(id,className){
-    if(id==1){
+function toggleClass(id, className) {
+    if (id == 1) {
         carouselBtn1.classList.add(className);
         carouselBtn2.classList.remove(className);
         carouselBtn3.classList.remove(className);
-    }else if(id==2){
+    } else if (id == 2) {
         carouselBtn1.classList.remove(className);
         carouselBtn2.classList.add(className);
         carouselBtn3.classList.remove(className);
-    }else if(id==3){
+    } else if (id == 3) {
         carouselBtn1.classList.remove(className);
         carouselBtn2.classList.remove(className);
         carouselBtn3.classList.add(className);
@@ -119,21 +119,22 @@ function toggleClass(id,className){
 }
 
 function showSlideNumber(id) {
+    const activeClass = 'carousel__circle-active';
     switch (id) {
         case 1:
-            slideMotion=0;
+            slideMotion = 0;
             changeSlide();
-            toggleClass(1,'carousel__circle-active');
+            toggleClass(1, activeClass);
             break;
         case 2:
-            slideMotion=slideMotionStep;
+            slideMotion = slideMotionStep;
             changeSlide();
-            toggleClass(2,'carousel__circle-active');
+            toggleClass(2, activeClass);
             break;
         case 3:
-            slideMotion=slideMotionStep*2;
+            slideMotion = slideMotionStep * 2;
             changeSlide();
-            toggleClass(3,'carousel__circle-active');
+            toggleClass(3, activeClass);
             break;
         default:
             console.log(`Error`);
@@ -182,3 +183,62 @@ function showSlideNumber(id) {
 // }
 
 // updateSlider();
+
+
+/* books */
+const radioWinter = document.querySelector('#radio__winter');
+const radioSpring = document.querySelector('#radio__spring');
+const radioSummer = document.querySelector('#radio__summer');
+const radioAutumn = document.querySelector('#radio__autumn');
+
+let activeSeason = radioWinter;
+activeSeason.checked = true;
+
+radioWinter.addEventListener('click', () => { showSeasonBooks("winter") });
+radioSpring.addEventListener('click', () => { showSeasonBooks("spring") });
+radioSummer.addEventListener('click', () => { showSeasonBooks("summer") });
+radioAutumn.addEventListener('click', () => { showSeasonBooks("autumn") });
+
+
+// activeSeason.checked = true;
+// activeSeason = radioAutumn;
+ activeSeason.checked = true;
+
+
+
+function showSeasonBooks(season) {
+    switch (season) {
+        case "winter":
+
+            break;
+        case "spring":
+
+            break;
+        case "summer":
+
+            break;
+        case "autumn":
+
+            break;
+        default:
+            console.log(`Error`);
+    }
+
+}
+
+// function toggleSeason(id, className) {
+//     if (id == 1) {
+//         carouselBtn1.classList.add(className);
+//         carouselBtn2.classList.remove(className);
+//         carouselBtn3.classList.remove(className);
+//     } else if (id == 2) {
+//         carouselBtn1.classList.remove(className);
+//         carouselBtn2.classList.add(className);
+//         carouselBtn3.classList.remove(className);
+//     } else if (id == 3) {
+//         carouselBtn1.classList.remove(className);
+//         carouselBtn2.classList.remove(className);
+//         carouselBtn3.classList.add(className);
+//     }
+
+// }
