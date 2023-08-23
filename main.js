@@ -71,7 +71,7 @@ function showPreviousSlide() {
         slideMotion -= slideMotionStep;
 
         slides.forEach((slide, index) => {
-            slide.style.right = slideMotion + 'px';
+            slide.style.right = slideMotion + 'rem';
         });
 
         if (nextBtn.disabled) {
