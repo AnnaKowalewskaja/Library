@@ -1,36 +1,36 @@
 
 /* burger menu */
 
-let burger = document.querySelector('.burger');
-let menu = document.querySelector('.nav');
-let menuLinks = document.querySelectorAll('.nav__list-link');
-let body = document.querySelector('.body');
+const BURGER = document.querySelector('.burger');
+const MENU = document.querySelector('.nav');
+const MENU_LINKS = document.querySelectorAll('.nav__list-link');
+const BODY = document.querySelector('.body');
 
 
 let openMenu = function () {
-    burger.classList.toggle('burger--active');
-    menu.classList.toggle('nav--active');
-    body.classList.toggle('noscroll');
+    BURGER.classList.toggle('burger--active');
+    MENU.classList.toggle('nav--active');
+    BODY.classList.toggle('noscroll');
 }
 
-burger.addEventListener('click', (e) => {
+BURGER.addEventListener('click', (e) => {
     e.stopPropagation();
     openMenu();
 });
 
-menuLinks.forEach((el) => {
+MENU_LINKS.forEach((el) => {
     el.addEventListener('click', function () {
-        burger.classList.remove('burger--active');
-        menu.classList.remove('nav--active');
-        body.classList.remove('noscroll');
+        BURGER.classList.remove('burger--active');
+        MENU.classList.remove('nav--active');
+        BODY.classList.remove('noscroll');
     });
 });
 
-body.addEventListener('click', (e) => {
+BODY.addEventListener('click', (e) => {
     let target = e.target;
-    let targetBurger = target == burger;
-    let targetMenu = target == menu || menu.contains(target);
-    let activeMenu = menu.classList.contains('nav--active');
+    let targetBurger = target == BURGER;
+    let targetMenu = target == MENU || MENU.contains(target);
+    let activeMenu = MENU.classList.contains('nav--active');
 
     if (!targetBurger && !targetMenu && activeMenu) {
         openMenu();
@@ -39,34 +39,34 @@ body.addEventListener('click', (e) => {
 
 /*slider */
 
-const slider = document.querySelector('.slider');
+const SLIDER = document.querySelector('.slider');
 
-const prevBtn = document.querySelector('.prev-button');
-const nextBtn = document.querySelector('.next-button');
-const slides = Array.from(slider.querySelectorAll('.about__slider_img'));
+const PREV_BTN = document.querySelector('.prev-button');
+const NEXT_BTN = document.querySelector('.next-button');
+let slides = Array.from(SLIDER.querySelectorAll('.about__slider_img'));
 let slideMotion = 0;
-let slideMotionStep = slides[0].offsetWidth + +window.getComputedStyle(slider).gap.substring(0, 2);
+let slideMotionStep = slides[0].offsetWidth + +window.getComputedStyle(SLIDER).gap.substring(0, 2);
 
-const carouselBtn1 = document.querySelector('#carousel_1');
-const carouselBtn2 = document.querySelector('#carousel_2');
-const carouselBtn3 = document.querySelector('#carousel_3');
+const CAROUSEL_BTN1 = document.querySelector('#carousel_1');
+const CAROUSEL_BTN2 = document.querySelector('#carousel_2');
+const CAROUSEL_BTN3 = document.querySelector('#carousel_3');
 let activeCarouselBtn = 1;
 
 
-prevBtn.addEventListener('click', showPreviousSlide);
-nextBtn.addEventListener('click', showNextSlide);
+PREV_BTN.addEventListener('click', showPreviousSlide);
+NEXT_BTN.addEventListener('click', showNextSlide);
 
 
-carouselBtn1.addEventListener('click', () => { showSlideNumber(1) });
-carouselBtn2.addEventListener('click', () => { showSlideNumber(2) });
-carouselBtn3.addEventListener('click', () => { showSlideNumber(3) });
+CAROUSEL_BTN1.addEventListener('click', () => { showSlideNumber(1) });
+CAROUSEL_BTN2.addEventListener('click', () => { showSlideNumber(2) });
+CAROUSEL_BTN3.addEventListener('click', () => { showSlideNumber(3) });
 
 
 
 
 function showPreviousSlide() {
     if (slideMotion - slideMotionStep < 0) {
-        prevBtn.disabled;
+        PREV_BTN.disabled;
     } else {
         slideMotion -= slideMotionStep;
 
@@ -74,22 +74,22 @@ function showPreviousSlide() {
             slide.style.right = slideMotion + 'rem';
         });
 
-        if (nextBtn.disabled) {
-            nextBtn.disabled = !nextBtn.disabled;
+        if (NEXT_BTN.disabled) {
+            NEXT_BTN.disabled = !NEXT_BTN.disabled;
         };
     }
 }
 
 function showNextSlide() {
-    if ((slideMotion + slideMotionStep >= slideMotionStep * slides.length) || (slider.offsetWidth >= 1400 && slideMotion + slideMotionStep >= slideMotionStep * (slides.length - 2))) {
-        nextBtn.disabled;
+    if ((slideMotion + slideMotionStep >= slideMotionStep * slides.length) || (SLIDER.offsetWidth >= 1400 && slideMotion + slideMotionStep >= slideMotionStep * (slides.length - 2))) {
+        NEXT_BTN.disabled;
     } else {
         slideMotion += slideMotionStep;
         slides.forEach((slide, index) => {
             slide.style.right = slideMotion + 'rem';
         })
-        if (prevBtn.disabled) {
-            prevBtn.disabled = !prevBtn.disabled;
+        if (PREV_BTN.disabled) {
+            PREV_BTN.disabled = !PREV_BTN.disabled;
         };
 
     }
@@ -103,17 +103,17 @@ function changeSlide() {
 }
 function toggleClass(id, className) {
     if (id == 1) {
-        carouselBtn1.classList.add(className);
-        carouselBtn2.classList.remove(className);
-        carouselBtn3.classList.remove(className);
+        CAROUSEL_BTN1.classList.add(className);
+        CAROUSEL_BTN2.classList.remove(className);
+        CAROUSEL_BTN3.classList.remove(className);
     } else if (id == 2) {
-        carouselBtn1.classList.remove(className);
-        carouselBtn2.classList.add(className);
-        carouselBtn3.classList.remove(className);
+        CAROUSEL_BTN1.classList.remove(className);
+        CAROUSEL_BTN2.classList.add(className);
+        CAROUSEL_BTN3.classList.remove(className);
     } else if (id == 3) {
-        carouselBtn1.classList.remove(className);
-        carouselBtn2.classList.remove(className);
-        carouselBtn3.classList.add(className);
+        CAROUSEL_BTN1.classList.remove(className);
+        CAROUSEL_BTN2.classList.remove(className);
+        CAROUSEL_BTN3.classList.add(className);
     }
 
 }
@@ -148,8 +148,8 @@ function showSlideNumber(id) {
 //work!!!!!
 //let slideIndex = 0;
 //const slideCount = slides.length;
-// prevBtn.addEventListener('click', showPreviousSlide);
-// nextBtn.addEventListener('click', showNextSlide);
+// PREV_BTN.addEventListener('click', showPreviousSlide);
+// NEXT_BTN.addEventListener('click', showNextSlide);
 
 // function showPreviousSlide() {
 //     slideIndex = (slideIndex - 1 + slideCount) % slideCount;
@@ -186,23 +186,23 @@ function showSlideNumber(id) {
 
 
 /* books */
-const radioWinter = document.querySelector('#radio__winter');
-const radioSpring = document.querySelector('#radio__spring');
-const radioSummer = document.querySelector('#radio__summer');
-const radioAutumn = document.querySelector('#radio__autumn');
+const RADIO_WINTER = document.querySelector('#radio__winter');
+const RADIO_SPRING = document.querySelector('#radio__spring');
+const RADIO_SUMMER = document.querySelector('#radio__summer');
+const RADIO_AUTUMN = document.querySelector('#radio__autumn');
 
-let activeSeason = radioWinter;
+let activeSeason = RADIO_WINTER;
 activeSeason.checked = true;
 
-radioWinter.addEventListener('click', () => { showSeasonBooks("winter") });
-radioSpring.addEventListener('click', () => { showSeasonBooks("spring") });
-radioSummer.addEventListener('click', () => { showSeasonBooks("summer") });
-radioAutumn.addEventListener('click', () => { showSeasonBooks("autumn") });
+RADIO_WINTER.addEventListener('click', () => { showSeasonBooks("winter") });
+RADIO_SPRING.addEventListener('click', () => { showSeasonBooks("spring") });
+RADIO_SUMMER.addEventListener('click', () => { showSeasonBooks("summer") });
+RADIO_AUTUMN.addEventListener('click', () => { showSeasonBooks("autumn") });
 
 
 // activeSeason.checked = true;
-// activeSeason = radioAutumn;
- activeSeason.checked = true;
+// activeSeason = RADIO_AUTUMN;
+activeSeason.checked = true;
 
 
 
@@ -228,17 +228,17 @@ function showSeasonBooks(season) {
 
 // function toggleSeason(id, className) {
 //     if (id == 1) {
-//         carouselBtn1.classList.add(className);
-//         carouselBtn2.classList.remove(className);
-//         carouselBtn3.classList.remove(className);
+//         CAROUSEL_BTN1.classList.add(className);
+//         CAROUSEL_BTN2.classList.remove(className);
+//         CAROUSEL_BTN3.classList.remove(className);
 //     } else if (id == 2) {
-//         carouselBtn1.classList.remove(className);
-//         carouselBtn2.classList.add(className);
-//         carouselBtn3.classList.remove(className);
+//         CAROUSEL_BTN1.classList.remove(className);
+//         CAROUSEL_BTN2.classList.add(className);
+//         CAROUSEL_BTN3.classList.remove(className);
 //     } else if (id == 3) {
-//         carouselBtn1.classList.remove(className);
-//         carouselBtn2.classList.remove(className);
-//         carouselBtn3.classList.add(className);
+//         CAROUSEL_BTN1.classList.remove(className);
+//         CAROUSEL_BTN2.classList.remove(className);
+//         CAROUSEL_BTN3.classList.add(className);
 //     }
 
 // }
