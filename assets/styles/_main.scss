@@ -274,7 +274,6 @@
 
 .book {
     position: relative;
-    display: flex;
     flex-direction: column;
     width: 53rem;
     height: 53.5rem;
@@ -738,6 +737,12 @@
     grid-template-rows: repeat(8, 1fr);
 }
 
+.spring,
+.winter,
+.summer,
+.autumn{
+    display: none;
+}
 
 
 

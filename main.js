@@ -66,7 +66,7 @@ CAROUSEL_BTN3.addEventListener('click', () => { showSlideNumber(3) });
 
 
 function showPreviousSlide() {
-    console.log(window.getComputedStyle(SLIDER).width.substring(0, 2));
+    // console.log(window.getComputedStyle(SLIDER).width.substring(0, 2));
     if (slideMotion - slideMotionStep < 0) {
         PREV_BTN.disabled;
     } else {
@@ -122,10 +122,10 @@ function toggleClass(id, className) {
 
 function showSlideNumber(id) {
     const ACTIVE_CLASS = 'carousel__circle-active';
-    
-    
-   
-    console.log();
+
+
+
+    // console.log();
     switch (id) {
         case 1:
             slideMotion = 0;
@@ -197,54 +197,58 @@ const RADIO_SPRING = document.querySelector('#radio__spring');
 const RADIO_SUMMER = document.querySelector('#radio__summer');
 const RADIO_AUTUMN = document.querySelector('#radio__autumn');
 
-let activeSeason = RADIO_WINTER;
-activeSeason.checked = true;
+const BOOKS_WINTER = Array.from(document.querySelectorAll('.winter'));
+const BOOKS_SPRING = Array.from(document.querySelectorAll('.spring'));
+const BOOKS_SUMMER = Array.from(document.querySelectorAll('.summer'));
+const BOOKS_AUTUMN = Array.from(document.querySelectorAll('.autumn'));
 
-RADIO_WINTER.addEventListener('click', () => { showSeasonBooks("winter") });
-RADIO_SPRING.addEventListener('click', () => { showSeasonBooks("spring") });
-RADIO_SUMMER.addEventListener('click', () => { showSeasonBooks("summer") });
-RADIO_AUTUMN.addEventListener('click', () => { showSeasonBooks("autumn") });
+// RADIO_WINTER.addEventListener('click', (e) => {
+//     let display = window.getComputedStyle(BOOKS_WINTER[0]).display;
+//     // console.log(window.getComputedStyle(BOOKS_WINTER[0]).display);
 
+//     if (display == 'none') {
+//         BOOKS_WINTER.forEach((el) => { fadeIn(el, 1000, "flex"); });
+//     } else {
+//         BOOKS_WINTER.forEach((el) => { fadeOut(el, 1000);});
+//     }
+// })
 
-// activeSeason.checked = true;
-// activeSeason = RADIO_AUTUMN;
-activeSeason.checked = true;
+// RADIO_SPRING.addEventListener('click', (e) => {
+//     let display = window.getComputedStyle(BOOKS_SPRING[0]).display;
+//     if (display == 'none') {
+//         BOOKS_SPRING.forEach((el) => { fadeIn(el, 1000, "flex"); });
+//     } else {
+//         BOOKS_SPRING.forEach((el) => { fadeOut(el, 1000); });
+//     }
+// })
 
-
-
-function showSeasonBooks(season) {
-    switch (season) {
-        case "winter":
-
-            break;
-        case "spring":
-
-            break;
-        case "summer":
-
-            break;
-        case "autumn":
-
-            break;
-        default:
-            console.log(`Error`);
-    }
-
+const fadeIn = (el, timeout, display) => {
+    const STYLE = el.style;
+    STYLE.opacity = 0;
+    STYLE.display = display || 'block';
+    STYLE.transition = `opacity ${timeout}ms`;
+    setTimeout(() => {
+        STYLE.opacity = 1;
+    }, 10);
 }
 
-// function toggleSeason(id, className) {
-//     if (id == 1) {
-//         CAROUSEL_BTN1.classList.add(className);
-//         CAROUSEL_BTN2.classList.remove(className);
-//         CAROUSEL_BTN3.classList.remove(className);
-//     } else if (id == 2) {
-//         CAROUSEL_BTN1.classList.remove(className);
-//         CAROUSEL_BTN2.classList.add(className);
-//         CAROUSEL_BTN3.classList.remove(className);
-//     } else if (id == 3) {
-//         CAROUSEL_BTN1.classList.remove(className);
-//         CAROUSEL_BTN2.classList.remove(className);
-//         CAROUSEL_BTN3.classList.add(className);
-//     }
+const fadeOut = (el) => {
+    const STYLE = el.style;
+    setTimeout(() => {
+        STYLE.opacity = 0;
+    }, 10);
+    STYLE.display = 'none';
+}
 
-// }
+
+const RADIOS = Array.from(document.querySelectorAll('input[type=radio][name="radio"]'));
+RADIOS.forEach(radio => {
+    radio.addEventListener('change', (e) => {
+        const seasonOfChange = e.target.id.replace('radio__', '').toUpperCase();
+        const nameOfChange = `BOOKS_${seasonOfChange}`;
+        nameOfChange.forEach((el) => { fadeIn(el, 1000, "flex"); });
+        
+    });
+  
+});
+
