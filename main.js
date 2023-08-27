@@ -45,7 +45,8 @@ const PREV_BTN = document.querySelector('.prev-button');
 const NEXT_BTN = document.querySelector('.next-button');
 let slides = Array.from(SLIDER.querySelectorAll('.about__slider_img'));
 let slideMotion = 0;
-let slideMotionStep = slides[0].offsetWidth + +window.getComputedStyle(SLIDER).gap.substring(0, 2);
+//let slideMotionStep = slides[0].offsetWidth + +window.getComputedStyle(SLIDER).gap.substring(0, 2);
+let slideMotionStep = 47;
 
 const CAROUSEL_BTN1 = document.querySelector('#carousel_1');
 const CAROUSEL_BTN2 = document.querySelector('#carousel_2');
@@ -65,6 +66,7 @@ CAROUSEL_BTN3.addEventListener('click', () => { showSlideNumber(3) });
 
 
 function showPreviousSlide() {
+    console.log(window.getComputedStyle(SLIDER).width.substring(0, 2));
     if (slideMotion - slideMotionStep < 0) {
         PREV_BTN.disabled;
     } else {
@@ -119,22 +121,26 @@ function toggleClass(id, className) {
 }
 
 function showSlideNumber(id) {
-    const activeClass = 'carousel__circle-active';
+    const ACTIVE_CLASS = 'carousel__circle-active';
+    
+    
+   
+    console.log();
     switch (id) {
         case 1:
             slideMotion = 0;
             changeSlide();
-            toggleClass(1, activeClass);
+            toggleClass(1, ACTIVE_CLASS);
             break;
         case 2:
             slideMotion = slideMotionStep;
             changeSlide();
-            toggleClass(2, activeClass);
+            toggleClass(2, ACTIVE_CLASS);
             break;
         case 3:
             slideMotion = slideMotionStep * 2;
             changeSlide();
-            toggleClass(3, activeClass);
+            toggleClass(3, ACTIVE_CLASS);
             break;
         default:
             console.log(`Error`);
