@@ -192,41 +192,20 @@ function showSlideNumber(id) {
 
 
 /* books */
-const RADIO_WINTER = document.querySelector('#radio__winter');
-const RADIO_SPRING = document.querySelector('#radio__spring');
-const RADIO_SUMMER = document.querySelector('#radio__summer');
-const RADIO_AUTUMN = document.querySelector('#radio__autumn');
+
 
 const BOOKS_WINTER = Array.from(document.querySelectorAll('.winter'));
 const BOOKS_SPRING = Array.from(document.querySelectorAll('.spring'));
 const BOOKS_SUMMER = Array.from(document.querySelectorAll('.summer'));
 const BOOKS_AUTUMN = Array.from(document.querySelectorAll('.autumn'));
 
-// RADIO_WINTER.addEventListener('click', (e) => {
-//     let display = window.getComputedStyle(BOOKS_WINTER[0]).display;
-//     // console.log(window.getComputedStyle(BOOKS_WINTER[0]).display);
-
-//     if (display == 'none') {
-//         BOOKS_WINTER.forEach((el) => { fadeIn(el, 1000, "flex"); });
-//     } else {
-//         BOOKS_WINTER.forEach((el) => { fadeOut(el, 1000);});
-//     }
-// })
-
-// RADIO_SPRING.addEventListener('click', (e) => {
-//     let display = window.getComputedStyle(BOOKS_SPRING[0]).display;
-//     if (display == 'none') {
-//         BOOKS_SPRING.forEach((el) => { fadeIn(el, 1000, "flex"); });
-//     } else {
-//         BOOKS_SPRING.forEach((el) => { fadeOut(el, 1000); });
-//     }
-// })
 
 const fadeIn = (el, timeout, display) => {
     const STYLE = el.style;
     STYLE.opacity = 0;
     STYLE.display = display || 'block';
     STYLE.transition = `opacity ${timeout}ms`;
+
     setTimeout(() => {
         STYLE.opacity = 1;
     }, 10);
@@ -241,14 +220,34 @@ const fadeOut = (el) => {
 }
 
 
+let activeSeason = BOOKS_WINTER;
+
+function changeSeason(nextSeason) {
+    activeSeason.forEach(el => fadeOut(el));
+    
+    nextSeason.forEach((el) => {
+        fadeIn(el, 2000, "flex");
+    });
+    activeSeason = nextSeason;
+    
+}
+
+
 const RADIOS = Array.from(document.querySelectorAll('input[type=radio][name="radio"]'));
 RADIOS.forEach(radio => {
     radio.addEventListener('change', (e) => {
         const seasonOfChange = e.target.id.replace('radio__', '').toUpperCase();
-        const nameOfChange = `BOOKS_${seasonOfChange}`;
-        nameOfChange.forEach((el) => { fadeIn(el, 1000, "flex"); });
-        
+        if (seasonOfChange == 'WINTER') {
+            changeSeason(BOOKS_WINTER);
+        } else if (seasonOfChange == 'SPRING') {
+            changeSeason(BOOKS_SPRING);
+        } else if (seasonOfChange == 'SUMMER') {
+            changeSeason(BOOKS_SUMMER);
+        } else if (seasonOfChange == 'AUTUMN') {
+            changeSeason(BOOKS_AUTUMN);
+        }
     });
-  
+
 });
 
+changeSeason(activeSeason);
