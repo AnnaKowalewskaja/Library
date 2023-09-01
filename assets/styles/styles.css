@@ -1037,13 +1037,6 @@
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
   overflow: hidden;
-  display: -ms-grid;
-  display: grid;
-  height: 114.4rem;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
-  -ms-grid-rows: (1fr)[8];
-      grid-template-rows: repeat(8, 1fr);
 }
 
 .spring,

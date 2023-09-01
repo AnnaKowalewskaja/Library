@@ -224,18 +224,19 @@ let activeSeason = BOOKS_WINTER;
 
 function changeSeason(nextSeason) {
     activeSeason.forEach(el => fadeOut(el));
-    
+
     nextSeason.forEach((el) => {
         fadeIn(el, 2000, "flex");
     });
     activeSeason = nextSeason;
-    
+
 }
 
 
 const RADIOS = Array.from(document.querySelectorAll('input[type=radio][name="radio"]'));
 RADIOS.forEach(radio => {
     radio.addEventListener('change', (e) => {
+        clearInterval(timerChangeSeason); 
         const seasonOfChange = e.target.id.replace('radio__', '').toUpperCase();
         if (seasonOfChange == 'WINTER') {
             changeSeason(BOOKS_WINTER);
@@ -251,3 +252,6 @@ RADIOS.forEach(radio => {
 });
 
 changeSeason(activeSeason);
+let timerChangeSeason = setInterval(() => console.log('tick'), 2000);
+
+
