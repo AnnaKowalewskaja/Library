@@ -541,7 +541,7 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 4rem;
-    flex-flow: column wrap;
+    flex-flow: row wrap;
 }
 
 .digitalCards__container_first {
@@ -675,6 +675,9 @@
 }
 
 @media (min-width:768px) and (max-width:1439px) {
+    .digitalCards__container{
+        flex-flow: column wrap;
+    }
     .digitalCards__container_first {
         width: 100%;
 

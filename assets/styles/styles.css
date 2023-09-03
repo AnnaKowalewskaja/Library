@@ -822,10 +822,10 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 4rem;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
 }
 
 .digitalCards__container_first {
@@ -987,6 +987,12 @@
 }
 
 @media (min-width: 768px) and (max-width: 1439px) {
+  .digitalCards__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+  }
   .digitalCards__container_first {
     width: 100%;
   }

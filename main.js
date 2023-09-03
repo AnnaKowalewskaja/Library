@@ -236,7 +236,7 @@ function changeSeason(nextSeason) {
 const RADIOS = Array.from(document.querySelectorAll('input[type=radio][name="radio"]'));
 RADIOS.forEach(radio => {
     radio.addEventListener('change', (e) => {
-        clearInterval(timerChangeSeason); 
+        //clearInterval(timerChangeSeason); 
         const seasonOfChange = e.target.id.replace('radio__', '').toUpperCase();
         if (seasonOfChange == 'WINTER') {
             changeSeason(BOOKS_WINTER);
@@ -252,6 +252,26 @@ RADIOS.forEach(radio => {
 });
 
 changeSeason(activeSeason);
-let timerChangeSeason = setInterval(() => console.log('tick'), 2000);
+//let timerChangeSeason = setInterval(() => console.log('tick'), 2000);
 
 
+//Check card
+
+const CHECK_CARD_BTN = document.querySelector('#checkTheCard');
+const BOOK_STATUS = Array.from(document.querySelectorAll('.book__buy'));
+
+
+let isRegistered = false;
+let isAuthorized = false;
+CHECK_CARD_BTN.addEventListener('click', (e) => { checkCard(e) });
+
+
+function checkCard(e) {
+if(!isRegistered){
+    e.preventDefault();
+}
+}
+
+function checkAuthorize ()=>{
+    
+}
