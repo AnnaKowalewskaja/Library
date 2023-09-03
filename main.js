@@ -267,11 +267,18 @@ CHECK_CARD_BTN.addEventListener('click', (e) => { checkCard(e) });
 
 
 function checkCard(e) {
-if(!isRegistered){
-    e.preventDefault();
-}
+    if (!isRegistered) {
+        e.preventDefault();
+    }
 }
 
-function checkAuthorize ()=>{
-    
+function checkAuthorize() {
+    if (!isAuthorized) {
+        BOOK_STATUS.forEach((btn) => {
+            btn.removeAttribute("disabled");
+            btn.textContent='Buy';
+        })
+    }
 }
+
+checkAuthorize();
